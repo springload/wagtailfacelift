@@ -4,6 +4,9 @@ Provides some visual enhancements to Streamfield components.
 
 Pure CSS overrides, there's no extra configuration.
 
+
+![Facelift](https://raw.githubusercontent.com/springload/wagtailfacelift/master/facelift.png)
+
 ## Installation.
 
 ```
