@@ -1,0 +1,226 @@
+/* ========================================================================== *\
+    Wagtail Admin CSS overrides
+\* ========================================================================== */
+
+/* ------------------------------ *\
+    Layout: full width admin
+\* ------------------------------ */
+
+.wrapper {
+    max-width: 100% !important;
+}
+
+.content {
+    /*padding-bottom: 0 !important;*/
+    /*margin-bottom: 0 !important;*/
+}
+
+.object fieldset {
+    max-width: 100%;
+    width: 100% !important;
+}
+
+
+/* ------------------------------- *\
+    General cosmetic improvements
+\* ------------------------------- */
+
+/* Dirty hack to scope these to non-login pages. */
+
+body:not(.login) .full input,
+body:not(.login) .full textarea,
+body:not(.login) .full .richtext {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+}
+
+@media only screen and (min-width: 50em) {
+    footer {
+        width: calc(100% - 280px) !important;
+        margin-left: 50px !important;
+        margin-right: 50px !important;
+    }
+}
+
+
+@media only screen and (min-width: 50em) {
+    label {
+        display: inline-block;
+    }
+}
+
+/* More refined corner radius */
+
+input,
+textarea,
+select,
+.richtext,
+.tagit {
+    border-radius: 3px !important;
+}
+
+
+/* ========================================================================== *\
+    Streamfield overrides
+\* ========================================================================== */
+
+.struct-block {
+    border: solid 1px rgba(0, 0, 0, 0.16);
+    padding: 0;
+    box-shadow: 0 2px 3px rgba(0,0,0, 0.12);
+    margin-bottom: 2rem;
+    border-radius: .25rem;
+    background: #fff;
+}
+
+/* Fix clearfixing of structs */
+
+.struct-block:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sequence-member-inner.sequence-member-inner > .field {
+    padding: 1rem 0;
+}
+
+.sequence .sequence > .sequence-member > .sequence-member-inner > .field {
+    padding-left: 1rem;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.12);
+    border: solid 1px rgba(0, 0, 0, 0.16);
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+
+.sequence .sequence > .sequence-member:nth-child(odd) .sequence-member-inner > .field {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+li.sequence-member .sequence-member-inner {
+    padding: 0 !important;
+}
+
+li.sequence-member .struct-block .fields {
+    width: 100% !important;
+}
+
+li.sequence-member .struct-block .sequence-container {
+    width: 83.333333% !important;
+    display: inline-block;
+}
+
+li.sequence-member .fields > li {
+    padding: .75rem 1rem;
+}
+
+li.sequence-member .fields > li:nth-child(odd) {
+    background: rgba(0,0,0,0.02);
+}
+
+li.sequence-member .fields > li:last-child {
+    border-bottom-width: 0 !important;
+}
+
+.block_field.stream-field > .block_widget > .field-content {
+    width: 100% !important;
+}
+
+/* Undo hovers on streamfields */
+
+li.sequence-member:hover {
+    border-color: transparent !important;
+    background-color: transparent !important;
+}
+
+.sequence-member input {
+    background-color: #fff;
+}
+
+.struct-block .sequence-container {
+    padding-bottom: 1rem !important;
+}
+
+
+/* ------------------------------ *\
+    Streamfield menu
+\* ------------------------------ */
+
+.stream-menu {
+    background-color: #F2FDFD !important;
+    box-shadow: none !important;
+    border: solid 1px rgba(67, 177, 176, 0.31);
+}
+
+.stream-menu-closed {
+    border-width: 0 !important;
+}
+
+.stream-menu li button {
+    color: #358c8b;
+}
+
+.stream-menu li button:hover,
+.stream-menu li button:focus {
+    color: #fff;
+}
+
+
+/* ========================================================================== *\
+    Misc fixes
+\* ========================================================================== */
+
+.chooser .unchosen:before,
+.chooser .chosen:before {
+    float: none !important;
+    display: inline-block !important;
+}
+
+.inEditMode {
+    margin-top: 2.75rem;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.hallotoolbar {
+    margin-top: -.5rem !important;
+    margin-left: 0 !important;
+    font-size: 12px !important;
+}
+
+.sequence-member .field.widget-rich_text_area .field-content {
+    width: 96% !important;
+}
+
+/* ========================================================================== *\
+    Theming
+\* ========================================================================== */
+
+/*
+    `.multi-field-dark`
+    ===================
+
+    Apply this class to your widget for a subtle background shift, eg:
+
+    MultiFieldPanel([
+        StreamFieldPanel('heroes'),
+        ],
+        heading="Homepage Heroes",
+        classname="collapsible collapsed multi-field-dark"
+    )
+ */
+
+.multi-field-dark {
+    background: #F0F3F5;
+    border-bottom: solid 1px #DADFE2;
+}
+
+.multi-field-dark.collapsed {
+    border-bottom-width: 0;
+}
+
+.multi-field-dark > h2 {
+    border-bottom: solid 1px rgba(0,0,0,0.1);
+}
