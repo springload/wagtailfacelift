@@ -8,7 +8,7 @@ develop-eggs
 node_modules
 .DS_Store
 /.venv/
-
+dist/
 /local/
 /docs/_build/
 *.pyc
@@ -18,7 +18,7 @@ node_modules
 downloads
 eggs
 parts
-src/*.egg-info
+*.egg-info
 lib64
 *.log
 *.pot
