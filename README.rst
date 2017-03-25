@@ -8,6 +8,9 @@ Wagtail Facelift
     
 Check out `Awesome Wagtail <https://github.com/springload/awesome-wagtail>`_ for more awesome packages and resources from the Wagtail community.
 
+.. image:: ./facelift.png
+   :target: https://pypi.python.org/pypi/wagtailfacelift
+
 Installation
 ------------
 
