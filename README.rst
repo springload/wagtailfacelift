@@ -1,5 +1,7 @@
-.. image:: https://img.shields.io/pypi/v/wagtailfacelift.svg
-   :target: https://pypi.python.org/pypi/wagtailfacelift
+**!! WARNING: This repo isn't maintained anymore !!**
+
+Overriding Wagtail CSS isn't sustainable and makes upgrading to a newer version more difficult.
+Designers are now more closely involved with the development of Wagtail (e.g. see the `Streamfield UI Changes <https://github.com/wagtail/wagtail/pull/3942>`_) so we are confident that hacks like this project are no longer needed.
 
 Wagtail Facelift
 ================
@@ -16,7 +18,7 @@ Installation
 
 .. code:: sh
 
-    pip install wagtailfacelift
+    pip install git+https://github.com/springload/wagtailfacelift.git
 
 
 Add the application to your installed apps:
